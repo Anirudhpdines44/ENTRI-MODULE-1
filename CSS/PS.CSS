@@ -1,0 +1,572 @@
+/* ========================================================================= */
+/* GLOBAL STYLES                             */
+/* ========================================================================= */
+
+/* The universal selector `*` applies to all elements, and `box-sizing: border-box;` ensures padding and borders are included in the element's total width and height. */
+* {
+    box-sizing: border-box;
+}
+
+/* Styles for the entire page's `<body>` element. */
+body {
+    /* Sets the default font for the entire website to Arial. */
+    font-family: Arial, sans-serif;
+    /* `margin: 0` removes the default browser margin. */
+    margin: 0;
+    /* `padding: 0` removes the default browser padding. */
+    padding: 0;
+    /* Sets a clean, white background for the entire page. */
+    background-color: #ffffff;
+    /* `line-height` sets the spacing between lines of text, improving readability. */
+    line-height: 1.6;
+    /* `color` sets the default text color to a dark gray. */
+    color: #333;
+}
+
+/* ========================================================================= */
+/* HEADER STYLES                              */
+/* ========================================================================= */
+
+/* Styles for the `<header>` element. */
+header {
+    /* Sets the header background color to white. */
+    background-color: #fff;
+    /* Creates a subtle light gray line at the bottom of the header for separation. */
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Styles for the top part of the header. */
+.header-top {
+    /* Sets a maximum width to center the content on large screens. */
+    max-width: 1100px;
+    /* `margin: 0 auto` centers the container horizontally. */
+    margin: 0 auto;
+    /* Adds vertical padding for spacing. */
+    padding: 20px 0;
+    /* `display: flex` turns the container into a Flexbox container. */
+    display: flex;
+    /* `justify-content: space-between` pushes the logo and user-actions to opposite ends. */
+    justify-content: space-between;
+    /* `align-items: center` vertically centers the items within the container. */
+    align-items: center;
+}
+
+/* Styles for the `.logo` container. */
+.logo {
+    /* `display: flex` to align items inside. */
+    display: flex;
+    /* `align-items: center` to vertically center the logo. */
+    align-items: center;
+}
+
+/* Styles for the official logo image. */
+.official-logo {
+    /* Sets the height of the logo to fit the header. */
+    height: 40px;
+    /* Maintains the aspect ratio of the image. */
+    width: auto;
+}
+
+/* Styles for the container holding the search bar, user profile, and subscribe button. */
+.user-actions {
+    /* `display: flex` aligns the items in a row. */
+    display: flex;
+    /* `gap` adds space between the items. */
+    gap: 20px;
+    /* Vertically centers the items. */
+    align-items: center;
+}
+
+/* Styles for the search bar form. */
+.search-bar {
+    /* `display: flex` aligns the input field and button side-by-side. */
+    display: flex;
+}
+
+/* Styles for the search input field. */
+.search-bar input {
+    /* Adds internal space. */
+    padding: 8px;
+    /* Sets a light gray border. */
+    border: 1px solid #ddd;
+    /* Rounds the corners. */
+    border-radius: 4px 0 0 4px;
+    /* Sets the width of the input field. */
+    width: 200px;
+}
+
+/* Styles for the search button. */
+.search-bar button {
+    /* Adds internal space. */
+    padding: 8px 12px;
+    /* Removes the default border. */
+    border: none;
+    /* Sets the button background color. */
+    background-color: #555;
+    /* Changes the text color. */
+    color: #fff;
+    /* Adds a pointer cursor on hover. */
+    cursor: pointer;
+    /* Rounds the corners on one side. */
+    border-radius: 0 4px 4px 0;
+}
+
+/* `hover` effect for the search button, making it slightly darker. */
+.search-bar button:hover {
+    background-color: #333;
+}
+
+/* Styles for the user profile container. */
+.user-profile {
+    /* `display: flex` aligns the photo and name. */
+    display: flex;
+    /* `align-items: center` vertically centers them. */
+    align-items: center;
+    /* `gap` adds space between the photo and name. */
+    gap: 10px;
+    /* Adds a pointer cursor to indicate it's clickable. */
+    cursor: pointer;
+}
+
+/* Styles for the profile photo image. */
+.user-profile .profile-photo {
+    /* Sets the width and height of the image. */
+    width: 40px;
+    height: 40px;
+    /* `border-radius: 50%` makes the image perfectly round. */
+    border-radius: 50%;
+    /* `object-fit: cover` prevents the image from stretching. */
+    object-fit: cover;
+}
+
+/* Styles for the user's name text. */
+.user-profile .user-name {
+    /* Sets the text color. */
+    color: #555;
+    /* Makes the text bold. */
+    font-weight: bold;
+}
+
+/* Styles for the subscribe button. */
+.subscribe-btn {
+    /* Adds internal space to the button. */
+    padding: 10px 20px;
+    /* Sets a distinctive red background color. */
+    background-color: #e62e2e;
+    /* Changes the text color to white. */
+    color: #fff;
+    /* Removes the default border. */
+    border: none;
+    /* Rounds the corners. */
+    border-radius: 5px;
+    /* Makes the text bold. */
+    font-weight: bold;
+    /* Adds a pointer cursor on hover. */
+    cursor: pointer;
+    /* `transition` creates a smooth animation for color changes. */
+    transition: background-color 0.3s ease;
+}
+
+/* `hover` effect for the subscribe button. */
+.subscribe-btn:hover {
+    /* Darkens the background color on hover. */
+    background-color: #c91f1f;
+}
+
+/* Styles for the main navigation bar. */
+.main-nav {
+    /* Sets the navigation bar background color to white. */
+    background-color: #fff;
+    /* Adds light gray borders for visual separation. */
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    /* Adds vertical padding. */
+    padding: 10px 0;
+}
+
+/* Styles for the unordered list inside the navigation. */
+.main-nav ul {
+    /* Sets a maximum width and centers the list. */
+    max-width: 1100px;
+    margin: 0 auto;
+    /* `list-style: none` removes the bullet points. */
+    list-style: none;
+    /* Removes default margins and padding. */
+    padding: 0;
+    /* `display: flex` aligns the list items horizontally. */
+    display: flex;
+}
+
+/* Styles for the navigation list items. */
+.main-nav li {
+    /* `flex-grow: 1` makes each item take up equal space. */
+    flex-grow: 1;
+    /* Centers the text within each item. */
+    text-align: center;
+}
+
+/* Styles for the links inside the navigation. */
+.main-nav a {
+    /* `display: block` makes the entire list item area clickable. */
+    display: block;
+    /* Adds padding for a larger clickable area. */
+    padding: 15px 20px;
+    /* Removes the default underline. */
+    text-decoration: none;
+    /* Sets the link color to a dark gray. */
+    color: #333;
+    /* Makes the text bold. */
+    font-weight: bold;
+    /* `transition` creates a smooth color change. */
+    transition: color 0.3s ease;
+}
+
+/* `hover` and `active` effect for the navigation links. This is the black to red change. */
+.main-nav a:hover,
+.main-nav a:active {
+    /* Changes the text color to red on hover or click. */
+    color: #e62e2e;
+}
+
+/* ========================================================================= */
+/* MAIN CONTENT STYLES                        */
+/* ========================================================================= */
+
+/* Styles for the main content container. */
+.main-container {
+    /* Sets a maximum width and centers the container. */
+    max-width: 1100px;
+    margin: 20px auto;
+    /* `display: flex` creates a two-column layout. */
+    display: flex;
+    /* `gap` adds space between the columns. */
+    gap: 30px;
+}
+
+/* Styles for the left-side main content area. */
+.main-content {
+    /* `flex: 3` makes this section take up more space than the sidebar (3 parts out of 4). */
+    flex: 3;
+}
+
+/* Styles for the featured article section. */
+.featured-article {
+    /* Adds bottom margin for spacing. */
+    margin-bottom: 30px;
+    /* Adds a bottom border to separate it from the grid. */
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 20px;
+}
+
+/* Styles for the featured article heading. */
+.featured-article h2 {
+    /* Sets the font size. */
+    font-size: 2.2em;
+    /* Removes the default margin. */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Styles for the featured article image. */
+.featured-img {
+    /* Sets the image width to 100% of its container. */
+    width: 100%;
+    /* `height: auto` maintains the image's aspect ratio. */
+    height: auto;
+    /* Adds a bottom margin. */
+    margin-bottom: 15px;
+}
+
+/* Styles for the read more link. */
+.read-more {
+    /* Sets the color of the link. */
+    color: #e62e2e;
+    /* Makes the text bold. */
+    font-weight: bold;
+    /* Removes the underline. */
+    text-decoration: none;
+    /* Adds a hover effect. */
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #333;
+}
+
+/* Styles for the article grid section. */
+.article-grid {
+    /* `display: flex` for a grid layout. */
+    display: flex;
+    /* `flex-wrap: wrap` allows items to wrap to the next line on smaller screens. */
+    flex-wrap: wrap;
+    /* `gap` adds space between the article cards. */
+    gap: 20px;
+}
+
+/* Styles for each individual article card. */
+.article-card {
+    /* `flex: 1 1 calc(50% - 10px)` makes each card take up about half the width,
+       with some space for the gap. `10px` is half of the `20px` gap. */
+    flex: 1 1 calc(50% - 10px);
+    /* `min-width` prevents the cards from getting too narrow. */
+    min-width: 250px;
+    /* Sets a white background. */
+    background-color: #fff;
+    /* Adds a light border. */
+    border: 1px solid #eee;
+    /* Adds padding inside the card. */
+    padding: 15px;
+    /* `box-shadow` adds a subtle shadow effect. */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* `transition` makes the hover effect smooth. */
+    transition: transform 0.3s ease;
+}
+
+/* `hover` effect for the article cards, making them lift slightly. */
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Styles for the article card images. */
+.article-card img {
+    /* Sets the width to 100%. */
+    width: 100%;
+    /* Sets a fixed height for a uniform look. */
+    height: 150px;
+    /* `object-fit: cover` ensures images fill the space without distortion. */
+    object-fit: cover;
+    /* Adds a bottom margin. */
+    margin-bottom: 10px;
+}
+
+/* Styles for the article card headings. */
+.article-card h3 {
+    /* Sets the font size. */
+    font-size: 1.2em;
+    /* Removes default margins. */
+    margin-top: 0;
+    margin-bottom: 5px;
+    /* Adds a smooth color transition. */
+    transition: color 0.3s ease;
+}
+
+/* `hover` effect for the article card headings. */
+.article-card:hover h3 {
+    color: #e62e2e;
+}
+
+/* ========================================================================= */
+/* SIDEBAR STYLES                             */
+/* ========================================================================= */
+
+/* Styles for the right-side sidebar. */
+.sidebar {
+    /* `flex: 1` makes this section take up one part of the layout. */
+    flex: 1;
+    /* Adds padding. */
+    padding: 15px;
+    /* Sets a light background color. */
+    background-color: #f9f9f9;
+    /* Adds a light border. */
+    border: 1px solid #f0f0f0;
+}
+
+/* Styles for the trending news section. */
+.trending-news {
+    /* Adds bottom margin for spacing. */
+    margin-bottom: 20px;
+}
+
+/* Styles for the trending news heading. */
+.trending-news h3 {
+    /* Sets the heading color. */
+    color: #e62e2e;
+    /* Adds a bottom border for separation. */
+    border-bottom: 2px solid #e62e2e;
+    /* Adds padding below the text. */
+    padding-bottom: 5px;
+    /* Removes top margin. */
+    margin-top: 0;
+}
+
+/* Styles for the trending news list. */
+.trending-news ul {
+    /* Removes bullet points. */
+    list-style: none;
+    /* Removes default margins and padding. */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the trending news list items. */
+.trending-news li {
+    /* Adds a bottom border for separation between list items. */
+    border-bottom: 1px solid #eee;
+    /* Adds vertical padding. */
+    padding: 10px 0;
+}
+
+/* Styles for the trending news links. */
+.trending-news a {
+    /* Sets the link color. */
+    color: #555;
+    /* Removes the underline. */
+    text-decoration: none;
+    /* `display: block` makes the entire list item clickable. */
+    display: block;
+    /* Adds a smooth color transition. */
+    transition: color 0.3s ease;
+}
+
+/* `hover` effect for the trending news links. */
+.trending-news a:hover {
+    color: #e62e2e;
+}
+
+/* Styles for the advertisement placeholder. */
+.ad-placeholder {
+    /* Sets a white background. */
+    background-color: #fff;
+    /* Adds a border. */
+    border: 1px dashed #ccc;
+    /* Centers the text. */
+    text-align: center;
+    /* Adds padding. */
+    padding: 50px 10px;
+    /* Sets a light gray color for the text. */
+    color: #999;
+}
+
+/* ========================================================================= */
+/* FOOTER STYLES                              */
+/* ========================================================================= */
+
+/* Styles for the `<footer>` element. */
+footer {
+    /* Sets a dark background color. */
+    background-color: #333;
+    /* Sets the text color to a light gray. */
+    color: #fff;
+    /* Adds top padding. */
+    padding: 40px 0 20px;
+    /* Sets the font size. */
+    font-size: 0.9em;
+}
+
+/* Styles for the footer container. */
+.footer-container {
+    /* Sets a maximum width and centers the container. */
+    max-width: 1100px;
+    margin: 0 auto;
+    /* `display: flex` for a multi-column layout. */
+    display: flex;
+    /* `flex-wrap: wrap` to allow columns to wrap on smaller screens. */
+    flex-wrap: wrap;
+    /* `justify-content: space-between` distributes space. */
+    justify-content: space-between;
+    /* `gap` adds space between columns. */
+    gap: 20px;
+}
+
+/* Styles for each footer section. */
+.footer-section {
+    /* `flex: 1` allows sections to grow and take up equal space. */
+    flex: 1;
+    /* `min-width` prevents sections from getting too narrow. */
+    min-width: 150px;
+}
+
+/* Styles for the footer section headings. */
+.footer-section h4 {
+    /* Sets the heading color. */
+    color: #e62e2e;
+    /* Adds a bottom margin. */
+    margin-bottom: 10px;
+}
+
+/* Styles for the footer lists. */
+.footer-section ul {
+    /* Removes bullet points. */
+    list-style: none;
+    /* Removes default margins and padding. */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the footer links. */
+.footer-section a {
+    /* Sets the link color. */
+    color: #ccc;
+    /* Removes the underline. */
+    text-decoration: none;
+    /* `transition` for a smooth hover effect. */
+    transition: color 0.3s ease;
+}
+
+/* `hover` effect for the footer links. */
+.footer-section a:hover {
+    color: #fff;
+}
+
+/* Styles for the copyright section. */
+.footer-bottom {
+    /* Sets the width to 100% to span the entire footer. */
+    width: 100%;
+    /* Centers the text. */
+    text-align: center;
+    /* Adds a top border for separation. */
+    border-top: 1px solid #444;
+    /* Adds top padding. */
+    padding-top: 20px;
+    /* Sets the top margin. */
+    margin-top: 20px;
+}
+
+/* ========================================================================= */
+/* RESPONSIVE STYLES                          */
+/* ========================================================================= */
+
+/* Media query for screens smaller than 768px (for tablets and mobile phones). */
+@media (max-width: 768px) {
+    /* Styles for the top part of the header on small screens. */
+    .header-top {
+        /* `flex-direction: column` stacks the items vertically. */
+        flex-direction: column;
+        /* `text-align: center` centers the logo. */
+        text-align: center;
+        /* `gap` adds space between the stacked items. */
+        gap: 15px;
+    }
+
+    /* Styles for the user actions on small screens. */
+    .user-actions {
+        /* `justify-content: center` centers the items horizontally. */
+        justify-content: center;
+    }
+
+    /* Styles for the article grid on small screens. */
+    .article-grid {
+        /* Sets the gap to zero for a cleaner mobile layout. */
+        gap: 0;
+    }
+
+    /* `flex-basis: 100%` makes each article card take up the full width. */
+    .article-card {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Styles for the main content and sidebar container on small screens. */
+    .main-container {
+        /* Stacks the main content and sidebar vertically. */
+        flex-direction: column;
+    }
+
+    /* Styles for the footer on small screens. */
+    .footer-container {
+        /* Stacks the footer sections vertically. */
+        flex-direction: column;
+        /* Centers the text in each section. */
+        text-align: center;
+    }
+}

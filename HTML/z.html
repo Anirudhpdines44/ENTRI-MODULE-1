@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Clone</title>
+    <!-- Use Google Fonts for the 'Inter' font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Apply the Inter font to the entire body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50 rounded-b-xl">
+        <!-- Logo and App Title -->
+        <div class="flex items-center space-x-2">
+            <span class="text-red-500 text-3xl font-extrabold">🍕</span>
+            <h1 class="text-2xl font-bold text-gray-800 hidden md:block">Zomato</h1>
+        </div>
+        <!-- Search Bar -->
+        <div class="relative flex-grow mx-4 max-w-2xl">
+            <input type="text" placeholder="Search for restaurants, cuisines, or dishes" class="w-full py-2 pl-10 pr-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 shadow-sm">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+        <!-- User Actions (Sign In/Cart) -->
+        <nav class="flex items-center space-x-4">
+            <a href="#" class="text-gray-600 hover:text-red-500 font-medium transition-colors hidden sm:block">Log In</a>
+            <a href="#" class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-full font-semibold transition-colors shadow-lg">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- Cuisines Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cuisines Near You</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Cuisine Card - Example -->
+                <div class="bg-white p-4 rounded-xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer">
+                    <img src="/PHOTOS/italian food.jpg" alt="Italian Cuisine" class="w-full h-auto rounded-lg mb-3">
+                    <p class="text-center font-medium text-gray-700">Italian</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer">
+                    <img src="/PHOTOS/indian food.jpg" alt="Indian Cuisine" class="w-full h-auto rounded-lg mb-3">
+                    <p class="text-center font-medium text-gray-700">Indian</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer">
+                    <img src="/PHOTOS/chinese food.webp" alt="Chinese Cuisine" class="w-full h-auto rounded-lg mb-3">
+                    <p class="text-center font-medium text-gray-700">Chinese</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer">
+                    <img src="/PHOTOS/famous-japanese-food-sushi.webp" alt="Japanese Cuisine" class="w-full h-auto rounded-lg mb-3">
+                    <p class="text-center font-medium text-gray-700">Japanese</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer">
+                    <img src="/PHOTOS/mexican food.jpg" alt="Mexican Cuisine" class="w-full h-auto rounded-lg mb-3">
+                    <p class="text-center font-medium text-gray-700">Mexican</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer">
+                    <img src="/PHOTOS/desserts.jpeg" alt="Desserts" class="w-full h-auto rounded-lg mb-3">
+                    <p class="text-center font-medium text-gray-700">Desserts</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurants Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Restaurants</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Restaurant Card - Example -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl cursor-pointer">
+                    <img src="/PHOTOS/pasta.webp" alt="Restaurant Name" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Pasta Palace</h3>
+                            <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">4.5 ★</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-2">Italian, Pizza, Desserts</p>
+                        <div class="flex justify-between text-gray-400 text-sm">
+                            <span>2.5 km</span>
+                            <span>$200 for one</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Another Restaurant Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl cursor-pointer">
+                    <img src="/PHOTOS/mexican food.jpg" alt="Another Restaurant Name" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Spicy Szechuan</h3>
+                            <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">4.2 ★</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-2">Chinese, Noodles</p>
+                        <div class="flex justify-between text-gray-400 text-sm">
+                            <span>1.8 km</span>
+                            <span>$150 for one</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Yet Another Restaurant Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl cursor-pointer">
+                    <img src="/PHOTOS/OIP.webp" alt="Yet Another Restaurant" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Burger Junction</h3>
+                            <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">4.8 ★</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-2">Fast Food, American</p>
+                        <div class="flex justify-between text-gray-400 text-sm">
+                            <span>3.1 km</span>
+                            <span>$100 for one</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-xl">
+        <div class="container mx-auto px-4 flex flex-col items-center text-center">
+            <div class="mb-4">
+                <span class="text-red-500 text-4xl font-extrabold">🍕</span>
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2023 Zomato Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

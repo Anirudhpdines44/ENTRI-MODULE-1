@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 - Wikipedia Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #202122;
+        }
+
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #a2a9b1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        }
+
+        header .logo img {
+            height: 40px;
+        }
+
+        header .search-bar {
+            display: flex;
+            gap: 5px;
+        }
+
+        header .search-bar input {
+            border: 1px solid #a2a9b1;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #0645ad;
+            font-weight: bold;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        .image-container {
+            float: right; /* Aligns image to the right */
+            margin: 0 0 15px 15px; /* Top, Right, Bottom, Left margins */
+            border: 1px solid #a2a9b1;
+            padding: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        .image-container img {
+            max-width: 250px; /* Max width for desktop */
+            height: auto;
+            display: block;
+        }
+
+        .image-container p {
+            font-size: 0.85em;
+            text-align: center;
+            margin: 5px 0 0 0;
+            color: #54595d;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            overflow: auto; /* Clears floats within the section */
+        }
+        
+        /* Table of Contents Styling */
+        .toc {
+            border: 1px solid #a2a9b1;
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin: 15px 0;
+            width: 300px; /* Fixed width for desktop */
+            float: left; /* Aligns to the left */
+            margin-right: 20px;
+        }
+
+        .toc h2 {
+            font-size: 1.2em;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc ul li {
+            margin-bottom: 5px;
+        }
+
+        .toc ul li a {
+            text-decoration: none;
+            color: #0645ad;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #a2a9b1;
+            margin-top: 20px;
+            color: #54595d;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) { /* Adjust breakpoint for image and TOC behavior */
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header .logo {
+                margin-bottom: 10px;
+            }
+
+            .main-nav ul {
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            .search-bar {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .search-bar input {
+                width: 70%;
+            }
+
+            .image-container {
+                float: none; /* No float on mobile */
+                margin: 15px auto; /* Center image */
+                max-width: 90%; /* Adjust max width for mobile */
+            }
+            
+            .image-container img {
+                max-width: 100%; /* Image takes full container width */
+            }
+
+            .toc {
+                float: none; /* No float on mobile */
+                width: 100%; /* Full width for TOC */
+                margin-right: 0;
+            }
+
+            .content .section {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .search-bar input {
+                width: 60%;
+            }
+            .main-nav ul {
+                flex-direction: column; /* Stack nav items on very small screens */
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/150px-Wikipedia-logo-v2.svg.png" alt="Wikipedia Logo">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Talk</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Wikipedia">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <main class="content">
+        <h1>HTML5</h1>
+
+        <div class="toc">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#introduction">1 Introduction</a></li>
+                <li><a href="#features">2 New Features</a></li>
+                <li><a href="#semantics">3 Semantic Elements</a></li>
+                <li><a href="#multimedia">4 Multimedia Support</a></li>
+                <li><a href="#apis">5 New APIs</a></li>
+                <li><a href="#history">6 History</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <a id="introduction"></a>
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/300px-HTML5_logo_and_wordmark.svg.png" alt="HTML5 Logo">
+                <p>The official logo for HTML5</p>
+            </div>
+            <h2>Introduction</h2>
+            <p><strong>HTML5</strong> is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current major version of the HTML standard. It aims to improve the language with support for the latest multimedia, while keeping it easily readable by humans and consistently understood by computers and devices.</p>
+            <p>HTML5 is intended to subsume not only HTML 4, but also XHTML 1, and DOM Level 2 HTML. HTML5 includes detailed processing models to encourage more interoperable implementations; it extends, improves, and rationalizes the markup available for documents, and introduces markup and application programming interfaces (APIs) for complex web applications.</p>
+        </div>
+
+        <div class="section">
+            <a id="features"></a>
+            <h2>New Features</h2>
+            <p>HTML5 introduced many new features designed to make web development easier and more powerful. Key additions include:</p>
+            <ul>
+                <li>New semantic elements .</li>
+                <li>Native multimedia support tags.</li>
+                <li>Graphics with  and SVG.</li>
+                <li>Enhanced form controls.</li>
+                <li>New JavaScript APIs for geolocation, local storage, drag and drop, and more.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <a id="semantics"></a>
+            <h3>Semantic Elements</h3>
+            <div class="image-container">
+                <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png" alt="HTML5 Badge">
+                <p>The HTML5 Badge from W3C</p>
+            </div>
+            <p>One of the most significant changes in HTML5 is the introduction of **semantic elements**. These elements provide more meaning about the content they contain, which helps both search engines and assistive technologies better understand the structure of a webpage. Instead of relying solely on generic `<div>` elements, developers can now use tags that clearly define the purpose of a section of content.</p>
+            <p>Examples include:</p>
+            <ul>
+                <li><code>&lt;article&gt;</code>: Self-contained content, like a blog post or news story.</li>
+                <li><code>&lt;section&gt;</code>: A thematic grouping of content, typically with a heading.</li>
+                <li><code>&lt;nav&gt;</code>: Navigation links.</li>
+                <li><code>&lt;header&gt;</code>: Introductory content for a section or the whole document.</li>
+                <li><code>&lt;footer&gt;</code>: Concluding content, often copyright information or contact details.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <a id="multimedia"></a>
+            <h3>Multimedia Support</h3>
+            <p>Prior to HTML5, embedding audio and video on web pages typically required third-party plugins like Adobe Flash. HTML5 brought native support for multimedia, allowing developers to embed media directly using the `<audio>` and `<video>` tags. This significantly improved accessibility and reduced reliance on external software.</p>
+            <pre><code>&lt;video width="320" height="240" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+        </div>
+
+        <div class="section">
+            <a id="apis"></a>
+            <h3>New APIs</h3>
+            <p>HTML5 also introduced a range of new JavaScript APIs that enable more dynamic and interactive web applications. Some notable APIs include:</p>
+            <ul>
+                <li>**Geolocation API**: Allows web applications to access the user's location.</li>
+                <li>**Web Storage API**: Provides mechanisms for web applications to store data locally within the user's browser (<code>localStorage</code> and <code>sessionStorage</code>).</li>
+                <li>**Drag and Drop API**: Enables elements to be dragged and dropped within a webpage.</li>
+                <li>**Canvas API**: Provides a means for drawing graphics and animations on a web page using JavaScript.</li>
+            </ul>
+            <p>These APIs empowered developers to create rich, desktop-like experiences directly in the browser without relying on external plugins.</p>
+        </div>
+
+        <div class="section">
+            <a id="history"></a>
+            <h2>History</h2>
+            <p>The development of HTML5 was started by the Web Hypertext Application Technology Working Group (WHATWG) in 2004, initially as a platform for web applications. It was later adopted by the World Wide Web Consortium (W3C) in 2007. The first public draft was released in 2008, and it achieved W3C Recommendation status on 28 October 2014. The development continues with subsequent versions such as HTML 5.1 and HTML 5.2.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Wikipedia Clone. Content adapted from Wikipedia for demonstration purposes.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* New Light Theme Variables (Professional White) */
+:root {
+    --primary-color: #4CAF50; /* Vibrant Green Accent (Kept) */
+    --secondary-color: #f8f9fa; /* Light Gray for Cards/Sections */
+    --dark-color: #212529; /* Dark text on light background */
+    --bg-color: #ffffff; /* Main Background (White) */
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--dark-color);
+    scroll-behavior: smooth;
+}
+
+/* Utility Class Overrides for Light Mode */
+.bg-light {
+    background-color: var(--secondary-color) !important;
+}
+.bg-dark {
+    background-color: var(--dark-color) !important; /* Footer background remains dark for contrast */
+}
+.text-muted {
+    color: #6c757d !important; /* Standard Bootstrap muted color for contrast */
+}
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+/* Navbar Styling */
+.navbar-custom {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+.navbar-brand {
+    font-weight: 800;
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+}
+.nav-link {
+    color: var(--dark-color) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+.navbar-light .navbar-toggler-icon {
+    /* Ensure the toggler icon is visible on a white background, using the accent color */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%234CAF50' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Hero Section Styling - Clean and light */
+#hero {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); /* Very subtle light gradient */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--dark-color); /* Dark title */
+}
+.hero-tagline {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.img-fluid.rounded-circle.shadow-lg {
+     /* Profile photo highlight */
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important; /* Softer shadow */
+     border: 3px solid var(--primary-color);
+}
+
+/* General Section Styling */
+section {
+    padding: 6rem 0;
+    border-bottom: 1px solid #ddd; /* Subtle light separator */
+}
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 3rem;
+}
+.section-heading-primary {
+    color: var(--primary-color);
+}
+.card {
+    background-color: #ffffff; /* White card */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2); /* Subtle green glow on hover */
+}
+
+/* Skills Progress Bars */
+.progress {
+    background-color: #e9ecef; /* Light track for progress bar */
+}
+.progress-bar {
+    background-color: var(--primary-color);
+    transition: width 0.8s ease-in-out;
+}
+
+/* Portfolio Cards */
+.project-img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Timeline for CV/Resume */
+.timeline:before {
+    background: var(--primary-color);
+}
+.timeline-item:before {
+    background: var(--primary-color);
+    border: 2px solid #ffffff;
+}
+.timeline-content {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Contact Form */
+.form-control, .form-floating label {
+    background-color: #ffffff; /* White background */
+    color: var(--dark-color);
+    border: 1px solid #ced4da;
+}
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+    background-color: #ffffff;
+    color: var(--dark-color);
+}
+/* Fix label color in floating input in light mode */
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-select ~ label {
+    color: #6c757d;
+    background-color: transparent;
+}
+/* Adjust padding for form floating */
+.form-floating > .form-control, .form-floating > .form-select {
+    padding: 1rem 0.75rem;
+}
+
+
+/* Custom Button */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff; /* White text on bright button */
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.btn-primary-custom:hover {
+    background-color: #388E3C; /* Darker Green */
+    border-color: #388E3C;
+}
+.btn-outline-secondary {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    transition: all 0.3s ease;
+}
+.btn-outline-secondary:hover {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+}
